@@ -1,21 +1,32 @@
-var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-                
-var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
-                
-var date = new Date;
-                
-var day = date.getDate();
-                
-var month = date.getMonth();
-                
-var thisDay = date.getDay();
-
-var utc = date.getUTCDate();
-
-thisDay = myDays[thisDay];
-                
-var yy = date.getYear();
-                
-var year = (yy < 1000) ? yy + 1900 : yy;
-                
-document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+function fungsihari()
+{
+var x;
+var y=new Date().getUTCDay();
+var z=new Date();
+switch (y)
+    {
+    case 0:
+        x="Hari Minggu";
+    break;
+    case 1:
+        x="Hari Senin";
+    break;
+    case 2:
+        x="Hari Selasa";
+    break;
+    case 3:
+        x="Hari Rabu";
+    break;
+    case 4:
+        x="Hari Kamis";
+    break;
+    case 5:
+        x="Hari Jum'at";
+    break;
+    case 6:
+        x="Hari Sabtu";
+    break;
+    }
+    document.getElementById("hari").innerHTML=x;
+    document.getElementById("tanggal").innerHTML=z;
+}
