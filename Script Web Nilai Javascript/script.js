@@ -11,11 +11,11 @@ function test () {
   if(val1>=80&&100)
     document.kirim.T2.value="A"
   if(val1>100){
-    alert('Nilai yang dimasukkan tidak valid')
+    alert('Mohon Masukkan Nilai Antara 1 sampai 100')
     document.kirim.T2.value=""
   }
   if(val1<0){
-    alert('Nilai yang dimasukkan tidak valid')
+    alert('Mohon Masukkan Nilai Antara 1 sampai 100')
     document.kirim.T2.value=""
   }
 }
